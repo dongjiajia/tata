@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册页面最终版</title>
+<script type="text/javascript">
+function myVal() {
+	var mypass1 = document.form1.password1.value;
+	if (mypass1==""){
+		alert("密码不能为空");
+		return false;
+	}
+	var myPass2 = document.form1.password2.value;
+	if (myPass2==""){
+		alert("密码不能为空");
+		return false;
+	}
+	if ((password1.value)!=(password2.value)){
+		alert("密码两次输入不一致");
+		return false;
+	}
+	if (myPass2.length>12){
+		alert("输入的密码不能大于12位");
+		return false;
+		}
+	if (mypass1.length>12){
+		alert("输入的密码不能大于12位");
+		return false;
+		}
+	return true;
+}
+</script>
+<style type="text/css">
+
+body {
+	background-image:url(images/%E7%BA%AF%E8%82%89%E6%A9%99%E8%89%B2.jpg);
+	text-align: center;
+	font-size: 15px;
+}
+#td {
+	font-family: "微软雅黑";
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+<p>&nbsp;</p>
+<p><img src="images/1.1.jpg" width="440" height="226" align="middle" /></p>
+<form id="form1" name="form1" method="post" action='登录页面最终版董佳.html' onsubmit="return myVal()" >
+  <table width="307" align="center">
+    <tr>
+      <td colspan="2"><div align="center">用户注册</div></td>
+    </tr>
+    <tr>
+      <td width="131">用户名：</td>
+      <td width="168"><label for="myName"></label>
+      <input type="text" name="myName" id="myName" /></td>
+    </tr>
+    <tr>
+      <td>请输入密码：</td>
+      <td><label for="password1"></label>
+      <input type="password" name="password1" id="password1" /></td>
+    </tr>
+    <tr>
+      <td>请再次输入密码：</td>
+      <td><label for="password2"></label>
+      <input type="password" name="password2" id="password2" /></td>
+    </tr>
+    <tr>
+      <td>常用邮箱：</td>
+      <td><label for="password2"></label>
+        <input type="text" name="myEmail" id="myEmail" /></td>
+    </tr>
+    <tr>
+      <td>
+      <a href="登录页面最终版董佳.html">
+      <input name="submit" type="button" id="submit" onclick="return myVal()" value="提交"/>
+      </a>
+      </td>
+      <td><input type="button" name="reset" id="reset" value="重置" onclick="window.location.href=('注册页面最终版.html')"/></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录页面</title>
+<script type="text/javascript">
+function myVal2() {
+	var myName2 = document.form2.myName2.value;
+	if (myName2==""){
+		alert("用户名不能为空");
+		return false;
+	}
+	var myPass3 = document.form2.password3.value;
+	if (myPass3==""){
+		alert("密码不能为空");
+		return false;
+	}
+	if (myPass3.length>12){
+		alert("输入的密码不能大于12位");
+		return false;
+	}
+	if ((password1.value)!=(password3.value)){
+		alert("密码输入错误");
+		return false;
+	}
+	return true;
+}
+</script>
+<style type="text/css">
+body {
+	background-image:url(images/%E6%9C%89%E8%8A%B1%E7%BA%B9%E7%9A%84%E7%BA%AF%E7%99%BD%E8%89%B2.1.jpg);
+	font-size: 15px;
+	text-align:center;
+}
+ tr,td{
+	font-family: "微软雅黑";
+	text-align: center;
+}
+</style>
+<link href="注册页面最终版.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<p>&nbsp;</p>
+<p><img src="images/tree.jpg" width="440" height="226" align="middle" /></p>
+<form id="form2" name="form2" method="post" action="" onsubmit="return myVal2()">
+  <table width="293" align="center">
+    <tr>
+      <td colspan="2"><div align="center">用户登录</div></td>
+    </tr>
+    <tr>
+      <td width="117">请输入用户名：</td>
+      <td width="168"><label for="myName2"></label>
+      <input type="text" name="myName2" id="myName2" /></td>
+    </tr>
+    <tr>
+      <td>请输入密码：</td>
+      <td><label for="password3"></label>
+      <input type="text" name="password3" id="password3" /></td>
+    </tr>
+    <tr>
+      <td>cookie:</td>
+      <td><label for="select"></label>
+        <select name="select" id="select">
+          <option selected="selected">保存一天</option>
+          <option>保存一个月</option>
+          <option>保存一年</option>
+        </select>
+</td>
+    </tr>
+    <tr>
+      <td><a href="找回密码.html">忘记密码</a></td>
+      <td><a href="注册页面最终版.html">注册</a></td>
+    </tr>
+    <tr>
+      <td><input type="button" name="submit" id="submit" value="登录"  onclick="return myVal2()" /></td>
+      <td><input type="radio" name="radio" id="radio" value="radio" />
+        记住我的登录状态</td>
+    </tr>
+  </table>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>
